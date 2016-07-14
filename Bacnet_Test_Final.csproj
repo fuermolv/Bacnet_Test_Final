@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6A81EC6-6426-4C58-A364-41A5AEFF52CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bacnet_Test_Final</RootNamespace>
+    <AssemblyName>Bacnet_Test_Final</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcknowledgeAlarmService.cs" />
+    <Compile Include="Alarm_Event_Manager.cs" />
+    <Compile Include="BacnetRecord.cs" />
+    <Compile Include="Bacnet_Device .cs" />
+    <Compile Include="Client_Event_Handler.cs" />
+    <Compile Include="Detail_Form_Escalators.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail_Form_Escalators.Designer.cs">
+      <DependentUpon>Detail_Form_Escalators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_Form_Lift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail_Form_Lift.Designer.cs">
+      <DependentUpon>Detail_Form_Lift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event_Handler.cs" />
+    <Compile Include="ApduProcessor.cs" />
+    <Compile Include="BacnetConst.cs" />
+    <Compile Include="BACNET_ADDRESS.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Bacnet_EnumAndStruct.cs" />
+    <Compile Include="Bacnet_Escalators.cs" />
+    <Compile Include="Bacnet_Lift.cs" />
+    <Compile Include="Bacnet_Server.cs" />
+    <Compile Include="BasicalProcessor.cs" />
+    <Compile Include="BvlcProcessor.cs" />
+    <Compile Include="CovProcessor.cs" />
+    <Compile Include="CovSubscribeService.cs" />
+    <Compile Include="Default_Event_Handler.cs" />
+    <Compile Include="Device_Manager.cs" />
+    <Compile Include="Device_Object.cs" />
+    <Compile Include="Escalators .cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forwarder.cs" />
+    <Compile Include="Forwar_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forwar_Form.Designer.cs">
+      <DependentUpon>Forwar_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IamService.cs" />
+    <Compile Include="Lift.cs" />
+    <Compile Include="Local_Device.cs" />
+    <Compile Include="NpduProcessor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadPropertyMultiService.cs" />
+    <Compile Include="ReadPropertyService.cs" />
+    <Compile Include="SimpleAck.cs" />
+    <Compile Include="TsmProcessor.cs" />
+    <Compile Include="UdpSender.cs" />
+    <Compile Include="ConFirmCovService.cs" />
+    <Compile Include="ConfirmedEventNotificationService.cs" />
+    <Compile Include="WhoIsService.cs" />
+    <EmbeddedResource Include="Detail_Form_Escalators.resx">
+      <DependentUpon>Detail_Form_Escalators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail_Form_Lift.resx">
+      <DependentUpon>Detail_Form_Lift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwar_Form.resx">
+      <DependentUpon>Forwar_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
